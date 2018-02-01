@@ -68,7 +68,6 @@ cc_defaults {
         "-Wunreachable-code",
         "-Wmissing-noreturn",
         "-pedantic",
-        "-std=c++11",
 
         // Explicitly enable the write-strings warning. VIXL uses
         // const correctly when handling string constants.
@@ -132,9 +131,8 @@ cc_library {
 
     pgo: {
         instrumentation: true,
-        profile_file: "dex2oat.profdata",
+        profile_file: "art/dex2oat.profdata",
         benchmarks: ["dex2oat"],
-        enable_profile_use: false,
     }
 }
 
@@ -153,9 +151,8 @@ cc_library {
 
     pgo: {
         instrumentation: true,
-        profile_file: "dex2oat.profdata",
+        profile_file: "art/dex2oat.profdata",
         benchmarks: ["dex2oat"],
-        enable_profile_use: false,
     }
 }
 
